@@ -5,29 +5,7 @@ import ru.netology.service.CashbackHackService;
 
 public class CashbackHackServiceTest {
 
-//    @Test
-//    public void checkingForNegativeValue() {
-//        Assert.assertThrows(IllegalArgumentException.class, () -> {
-//            CashbackHackService cashback = new CashbackHackService();
-//            cashback.remain (-1);
-//        });
-//    }
 
-//    @org.junit.Test
-//    public void checkForMultipleOfThousand() {
-//        Assert.assertThrows(IllegalArgumentException.class, () -> {
-//            CashbackHackService cashback = new CashbackHackService();
-//            cashback.remain (1000);
-//        });
-//    }
-//
-//    @org.junit.Test
-//    public void testFunctionCheckAtZero() {
-//        Assert.assertThrows(IllegalArgumentException.class, () -> {
-//            CashbackHackService cashback = new CashbackHackService();
-//            cashback.remain (0);
-//        });
-//    }
 
     @org.junit.Test
     public void testFunctionCheck() {
@@ -46,5 +24,29 @@ public class CashbackHackServiceTest {
 
         Assert.assertEquals(actual , expected);
     }
+    @Test
+    public void checkingForNegativeValue() {
+        Assert.assertThrows(IllegalArgumentException.class, () -> {
+            CashbackHackService cashback = new CashbackHackService();
+            cashback.remain (-1);
+        });
+    }
+
+    @org.junit.Test
+    public void checkForMultipleOfThousand() {
+        Assert.assertThrows(IllegalArgumentException.class, () -> {
+            CashbackHackService cashback = new CashbackHackService();
+            cashback.remain (1000);
+        });
+    }
+
+    @org.junit.Test
+    public void testFunctionCheckAtZero() {
+        Assert.assertThrows(IllegalArgumentException.class, () -> {
+            CashbackHackService cashback = new CashbackHackService();
+            cashback.remain (0);
+        });
+    }
+
 
 }
